@@ -29,6 +29,7 @@ jobs:
           sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android
           sudo apt update -y
           sudo apt full-upgrade -y
+          sudo apt install -y libunwind-dev
           sudo apt install -y \
             ack antlr3 asciidoc autoconf automake autopoint binutils bison \
             build-essential bzip2 ccache cmake cpio curl device-tree-compiler \
