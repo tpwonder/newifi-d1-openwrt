@@ -265,3 +265,17 @@ jobs:
           name: Newifi_D1_OpenWrt
           path: output/*
           retention-days: 30
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: "v1.0.0-$(date +%Y%m%d)"
+          name: "Newifi D1 OpenWrt $(date +%Y-%m-%d)"
+          body: |
+            Lenovo Newifi D1 OpenWrt 固件
+源码: [coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)
+
+**插件列表:** argon主题 / 网络监控 / ttyd / zerotier / reguard / upnp / ipv6 / cloudflared / kms / nano / iperf3 / USB全格式挂载 / Samba4 / MiniDLNA / 网络打印
+          files: output/*
+          draft: false
+          prerelease: false
