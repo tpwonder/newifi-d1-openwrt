@@ -65,6 +65,7 @@ jobs:
       - name: Update Feeds
         run: |
           cd openwrt
+          echo "src-git argon https://github.com/sbwml/luci-theme-argon.git;openwrt-23.05" >> feeds.conf.default
           ./scripts/feeds update -a
 
       - name: Install Feeds
